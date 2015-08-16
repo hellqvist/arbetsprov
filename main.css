@@ -1,0 +1,100 @@
+.main-body {
+	margin: 0;
+	background: -moz-linear-gradient(top,#f0f0f0 0,#fff 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f0f0f0),color-stop(100%,#fff));
+	background: -webkit-linear-gradient(top,#f0f0f0 0,#fff 100%);
+	background: -o-linear-gradient(top,#f0f0f0 0,#fff 100%);
+	background: -ms-linear-gradient(top,#f0f0f0 0,#fff 100%);
+	background: linear-gradient(to bottom,#f0f0f0 0,#fff 100%);
+	background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+	div.container {
+	  width: 480px;
+	}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	div.container {
+	  width: 720px;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	div.container {
+	  width: 960px;
+	}
+}
+
+.container {
+	min-height: 480px;
+	overflow: hidden;
+ 	margin: auto;
+ 	background-color: #fff;
+ 	-moz-box-shadow: 0 0 4px 1px #bbb;
+ 	-webkit-box-shadow: 0 0 4px 1px #bbb;
+ 	box-shadow: 0 0 4px 1px #bbb;
+}
+
+.container-body {
+	padding: 20px;
+}
+
+.result-body {
+	text-align: center;
+}
+
+.align-right {
+	float: right;
+}
+
+.result-image {
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 10px 5px 0px 5px;
+	font-size: 96px;
+	font-weight: 900;
+	font-family: Helvetica;
+	color: #F0F0F0;
+	cursor: hand;
+}
+
+.result-image img {
+	border-radius: 5px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	overflow: hidden;
+	width: 100%;
+	vertical-align: top;
+}
+
+.result-image:after, .result-image:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.result-image:after {
+    content:'+';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+.result-image--gallery:after {
+	content: '';
+}
+.result-image:hover:after, .result-image:hover:before {
+    opacity:1;
+}
+
+.result-image--selected:after {
+	content: '-';
+}
+
+.result-image--selected {
+	opacity: 0.25;
+}

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Contribe - Arbetsprov för webbutvecklare</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="common.css">
+<link rel="stylesheet" type="text/css" href="imagebox.css">
+<link rel="stylesheet" type="text/css" href="spinner.css">
+<script type="text/javascript" src="flickr.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body class="main-body">
+<div class="container">
+<div class="container-body">
+	<input type="text" id="keyword" placeholder="Nyckelord" class="search-box">
+	<input type="submit" value="Sök" onclick="search(document.getElementById('keyword').value)">
+	<input type="button" id="showGalleryButton" class="align-right" value="Visa galleri (0 bilder)" onclick="showGallery()">
+</div>
+<div id="spinner" class="spinner">
+	  <div class="rect1"></div>
+	  <div class="rect2"></div>
+	  <div class="rect3"></div>
+	  <div class="rect4"></div>
+	  <div class="rect5"></div>
+	</div>
+
+<div id="search_result" class="container-body result-body">
+
+</div>
+
+<div class="imagebox" id="imagebox">
+	<div class="box">
+		<a class="close" onclick="hideOriginalImage()">X</a>
+		<p class="title" id="imagebox-title"></p>
+		<div class="content" id="imagebox-content">
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
